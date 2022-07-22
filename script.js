@@ -26,13 +26,14 @@ function generatePassword() {
   // the generated number will then be converted to a character and concatonated on the password
   var passwordArray = [];
   passwordArray.length = passwordLength;
-  for (i = 0; i < passwordArray.length; i++) {
+  for (var i = 0; i < passwordArray.length; i++) {
     passwordArray[i] = String.fromCharCode(getRandomInt(95) + 31);
     console.log(passwordArray[i]);
   }
 
+  // create the password string and concatonate the generated numbers together in the passwordArray to form one password
   var password = "";
-  for (i = 0; i < passwordArray.length; i++) {
+  for (var i = 0; i < passwordArray.length; i++) {
     password += passwordArray[i];
   }
 
